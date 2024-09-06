@@ -2,11 +2,11 @@
 
 # Week 1
 
-| **Code** | **Person**    | **Tasks**                                                                      | **% of Total Work**|
-|----------|---------------|--------------------------------------------------------------------------------|--------------------|
-|    1     | Vũ Hữu Lưu    | Aliasing Assignment                                                            | 100%               |
-|          |               | Assignment is Tricky 1 <br> Assignment is Tricky 2                             |                    |
-|          |               | 
+| **Code** | **Person**     | **Tasks**                                                                      | **% of Total Work**|
+|----------|----------------|--------------------------------------------------------------------------------|--------------------|
+|    1     |   Vũ Hữu Lưu   | Aliasing Assignment                                                            |      80%           |
+|          |                | Assignment is Tricky 1 <br> Assignment is Tricky 2                             |      20%           |
+|    2     | Nguyễn Minh Đức| Control <br> Interaction <br> Case 
 
 # Week 2 *(unfinished)*
 
