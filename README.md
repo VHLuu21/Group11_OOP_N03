@@ -1,7 +1,12 @@
 # Final project: Xây dựng quản lí thư viện
-  Các chức năng chính:  
-    1. Quản lí sách, tài liệu.  
-      - Thêm, sửa, xóa sách, tài liệu, số lượng.  
-      - Liệt kê thông sách, tài liệu.  
-    2. Mượn sách, trả sách.  
-      - Thông tin sinh viên mượn, trả sách.  
+    Yêu cầu:  
+  - Giao diện cửa sổ JavaFX.  
+  - Có chức năng quản lý sách, tài liệu:  
+    + Thêm, sửa, xóa sách, tài liệu và số lượng.  
+    + Liệt kê thông sách, tài liệu; Số lượng tồn; Người đang mượn, ….  
+  - Có chức năng mượn sách, trả sách:  
+    + Khi xử lý chức năng này cần có thêm thông tin sinh viên mượn.   
+  - Dữ liệu được lưu trữ xuống file nhị phân:  
+    + Cần tạo các lớp liên quan đến “sách, tài liệu” để đọc, ghi xuống file.  
+  - Khi làm việc với dữ liệu trong bộ nhớ, dữ liệu cần được lưu trữ dưới dạng các Collection tùy chọn
+như ArrayList, LinkedList, Map, ….   
