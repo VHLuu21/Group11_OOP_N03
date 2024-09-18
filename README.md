@@ -13,7 +13,7 @@
 |----------|------------------|--------------------------------------------------------------------------------|--------------------|
 | Code 1   |  Nguyễn Minh Đức | Exercise Lecture (3 & 4) <br> All Exercises on Interfaces, from page 219       |                    |
 | Code 2   |  Vũ Hữu Lưu      | All Exercises (e.g. Exercises 3, 4, 5…) on Access Control, from page 145 <br> All Exercises on Initialization and Cleanup, from page 107 <br> All Exercises on Reusing Classess, from page 165 <br> All Exercises on Polymorphism, from page 193      |                    |
-| Code 3   |  Vũ Hữu Lưu <br> NGuyễn Minh Đức     | All tasks                                                                      |                    |
+| Code 3   |  Vũ Hữu Lưu <br> Nguyễn Minh Đức     | All tasks                                                                      |                    |
 
 # Week 3
 
