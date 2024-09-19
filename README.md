@@ -18,3 +18,8 @@
 # Week 3 (Midterm)
 
 # Week 4
+
+| **Code** | **Person**     | **Tasks**                                                                      | **% of Total Work**|
+|----------|----------------|--------------------------------------------------------------------------------|--------------------|
+|    1     | Nguyễn Minh Đức|                                                                                |                    |
+|    2     | Vũ Hữu Lưu     | Exercise 17 on Polymorphism, page 216 <br> Build Abastract Class and extended classes for Orchestra example, on Abstract class, page 220 <br> Exercise 21 on Interfaces, page 258 (nested class)                                         |                    |
