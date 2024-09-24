@@ -1,7 +1,7 @@
-#Công việc:
-    Lưu Đồ UML: Minh Đức 1 - Hữu Lưu 4 (Có thảo luận, góp ý lẫn nhau)
-    Thuyết trình: Minh Đức
-    Code: Hai thành viên làm chung
+# Công việc
+    - Lưu Đồ UML: Minh Đức 1 - Hữu Lưu 4 (Có thảo luận, góp ý lẫn nhau)
+    - Thuyết trình: Minh Đức
+    - Code: Hai thành viên làm chung
 # Final project: Xây dựng quản lí thư viện
     Yêu cầu:  
   - Giao diện cửa sổ JavaFX.  
