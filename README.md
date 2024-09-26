@@ -30,7 +30,7 @@
 
 ## 1.3.2 Return Book
 
-![UML](./Images/Sequence_Diagram02.jpg)
+![UML](./Images/Sequence Diagram02.jpg)
 
 ## 1.4 UML State Diagram
 
