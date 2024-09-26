@@ -15,20 +15,25 @@
 ## UML Diagram
 
 ## 1.1 UML Class Diagram
+
 ![UML](Images/Class Diagram.jpg)
 
 ## 1.2 UML Activity Diagram
-![UML}(Images/Activity Diagram.jpg)
+
+![UML](Images/Activity Diagram.jpg)
 
 ## 1.3 UML Sequence 
 
 ## 1.3.1 Borrow Book
+
 ![UML](Images/Sequence Diagram01.jpg)
 
 ## 1.3.2 Return Book
+
 ![UML](Images/Sequence Diagram02.jpg)
 
 ## 1.4 UML State Diagram
+
 ![UML](Images/State Diagram.jpg)
 
 
