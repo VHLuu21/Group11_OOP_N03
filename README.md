@@ -3,8 +3,8 @@
 ## Giới Thiệu Dự Án
 Đây là dự án quản lí thư viện cho phép sinh viên mượn trả tài liệu.
 ## Thành Viên Nhóm
-- **Vũ Hữu Lưu**
-- **Nguyễn Minh Đức**
+- **Vũ Hữu Lưu** : Phát triển phần mềm
+- **Nguyễn Minh Đức** : Phát triển phần mềm
 
 ## Các Chức Năng  
   - Có chức năng quản lý sách, tài liệu:  
@@ -30,7 +30,7 @@
 
 ## 1.3.2 Return Book
 
-![UML](./Images/Sequence Diagram02.jpg)
+![UML](./Images/Sequence_Diagram02.jpg)
 
 ## 1.4 UML State Diagram
 
