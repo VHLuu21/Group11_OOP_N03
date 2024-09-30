@@ -38,4 +38,4 @@
 
 ## 1.5 First View Of The Project
 
-![img](./Images/fisrtProject.png)
+![firstProject](./Images/firstProject.png)
