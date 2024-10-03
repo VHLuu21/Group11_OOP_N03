@@ -39,3 +39,7 @@
 ## 1.5 First View Of The Project
 
 ![firstProject](./Images/firstProject.png)
+
+## 1.6 Write To File
+
+![WriteToFile](./Images/WriteToFile.png)
