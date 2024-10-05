@@ -38,8 +38,8 @@
 
 ## 1.5 First View Of The Project
 
-![firstProject]()
+
 
 ## 1.6 Write To File
 
-![WriteToFile]()
+
