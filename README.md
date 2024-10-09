@@ -16,7 +16,6 @@
 
 ## 1.1 UML Class Diagram
 
-![UML](./Images/Class_Diagram.jpg)
 
 ## 1.2 UML Activity Diagram
 
@@ -24,13 +23,17 @@
 
 ## 1.3 UML Sequence 
 
-## 1.3.1 Borrow Book
+## 1.3.1 Signup and Login
 
-![UML](./Images/Sequence_Diagram01.jpg)
 
-## 1.3.2 Return Book
 
-![UML](./Images/Sequence_Diagram02.jpg)
+## 1.3.2 Borrow Book
+
+
+
+## 1.3.3 Return Book
+
+
 
 ## 1.4 UML State Diagram
 
@@ -38,8 +41,8 @@
 
 ## 1.5 First View Of The Project
 
-![firstProject1](./Images/firstProject1.png)
+
 
 ## 1.6 Write To File
 
-![WriteToFile1](Images/WriteToFile1.png)
+
