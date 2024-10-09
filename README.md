@@ -16,7 +16,7 @@
 
 ## 1.1 UML Class Diagram
 
-![UML](Images/Class Diagram.png)
+![UML](./Images/Class Diagram.png).
 
 ## 1.2 UML Activity Diagram
 
