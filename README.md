@@ -29,11 +29,11 @@
 
 ## 1.3.2 Borrow Book
 
-![UML](Images/SequenceDiagram02.png)
+![UML](Images/SequenseDiagram02.png)
 
 ## 1.3.3 Return Book
 
-![UML](Images/SequenseDiagram03.png)
+![UML](Images/SequenceDiagram03.png)
 
 ## 1.4 UML State Diagram
 
