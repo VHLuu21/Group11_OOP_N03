@@ -25,15 +25,15 @@
 
 ## 1.3.1 Signup and Login
 
-
+![UML](Images/SequenceDiagram01.png)
 
 ## 1.3.2 Borrow Book
 
-
+![UML](Images/SequenceDiagram02.png)
 
 ## 1.3.3 Return Book
 
-
+![UML](Images/SequenseDiagram03.png)
 
 ## 1.4 UML State Diagram
 
@@ -41,8 +41,8 @@
 
 ## 1.5 First View Of The Project
 
-
+![FirstScreen](Images/FirstScreen.png)
 
 ## 1.6 Write To File
 
-
+![WriteToFile](Images/WriteToFile.png)
