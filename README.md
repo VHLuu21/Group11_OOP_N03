@@ -24,7 +24,7 @@
 
 ## 1.3 UML Sequence 
 
-## 1.3.1 Signup and Login
+## 1.3.1 Return Book
 
 ![UML](Images/SequenceDiagram01.png)
 
@@ -32,7 +32,7 @@
 
 ![UML](Images/SequenseDiagram02.png)
 
-## 1.3.3 Return Book
+## 1.3.3 Signup and Login
 
 ![UML](Images/SequenceDiagram03.png)
 
