@@ -23,7 +23,7 @@ public class ManageBook extends javax.swing.JFrame {
         setBookDetailsToTable();
     }
     
-    //set thong tin cua book vao table
+    //Set thông tin của sách vào table
     public void setBookDetailsToTable(){
         
         try{
@@ -50,7 +50,7 @@ public class ManageBook extends javax.swing.JFrame {
         }
     }
     
-    //Them sach
+    //thêm sách
     public boolean addBook(){
         
         boolean isAdd = false;
@@ -81,7 +81,7 @@ public class ManageBook extends javax.swing.JFrame {
         return isAdd;
     }
     
-    //Update sach
+    //Update sách
     public boolean updateBook(){
         boolean isUpdate = false;
         bookId = Integer.parseInt(txt_bookId.getText());
@@ -111,7 +111,7 @@ public class ManageBook extends javax.swing.JFrame {
         return isUpdate;
     }
     
-    //Xoa sach
+    //Xóa sách
     public boolean deleteBook(){
         boolean isDelete = false;
         bookId = Integer.parseInt(txt_bookId.getText());
@@ -134,7 +134,7 @@ public class ManageBook extends javax.swing.JFrame {
         return isDelete;
     }
     
-    //Clear bang
+    //Clear bảng
     public void clearTable(){
         DefaultTableModel model = (DefaultTableModel) tbl_bookDetails.getModel();
         model.setRowCount(0);
@@ -276,7 +276,7 @@ public class ManageBook extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 590, 100, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 800));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 750));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -293,7 +293,7 @@ public class ManageBook extends javax.swing.JFrame {
         tbl_bookDetails.setColorBordeFilas(new java.awt.Color(51, 51, 255));
         tbl_bookDetails.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_bookDetails.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
-        tbl_bookDetails.setColorFilasForeground2(new java.awt.Color(51, 51, 255));
+        tbl_bookDetails.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
         tbl_bookDetails.setColorSelBackgound(new java.awt.Color(255, 51, 51));
         tbl_bookDetails.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         tbl_bookDetails.setFuenteFilas(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
@@ -309,7 +309,7 @@ public class ManageBook extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbl_bookDetails);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 750, 260));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 840, 340));
 
         jLabel10.setFont(new java.awt.Font("Sitka Text", 1, 30)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 51, 51));

@@ -14,7 +14,7 @@ public class ReturnBook extends javax.swing.JFrame {
     public ReturnBook() {
         initComponents();
     }
-    //lay thong tin tu database va hien thi
+    //Lấy thông tin từ databse và hiển thị
     public void getBorrowBookDetails(){
         
         int bookId = Integer.parseInt(txt_bookId.getText());
@@ -27,7 +27,7 @@ public class ReturnBook extends javax.swing.JFrame {
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, bookId);
             pst.setInt(2, studentId);
-            pst.setString(3, "Đang mượn");
+            pst.setString(3, "Borrowing");
             
             ResultSet rs = pst.executeQuery();
             if(rs.next()){
@@ -53,7 +53,7 @@ public class ReturnBook extends javax.swing.JFrame {
         
     }
     
-    //Tra sach
+    //Trả sách
     public boolean returnBook(){
         boolean isReturn = false;
         int bookId = Integer.parseInt(txt_bookId.getText());
@@ -63,10 +63,10 @@ public class ReturnBook extends javax.swing.JFrame {
             Connection con = DBConnection.getConnection();
             String sql = "UPDATE borrow_book_details SET status = ? WHERE student_id = ? AND book_id = ? AND status = ?";
             PreparedStatement pst = con.prepareStatement(sql);
-            pst.setString(1, "Đã trả");
+            pst.setString(1, "Returned");
             pst.setInt(2, studentId);
             pst.setInt(3, bookId);
-            pst.setString(4, "Đang mượn");
+            pst.setString(4, "Borrowing");
             
             int RC = pst.executeUpdate();
             if(RC > 0){
@@ -80,7 +80,7 @@ public class ReturnBook extends javax.swing.JFrame {
         return isReturn;
     }
     
-    //update so luong sach sau khi tra
+    //Update số lượng sachs sau khi trả
     public void updateBookCount(){
         int bookId = Integer.parseInt(txt_bookId.getText());
         try{

@@ -18,7 +18,7 @@ public class BorrowBook extends javax.swing.JFrame {
         initComponents();
     }
     
-    //lay thong tin tu database va hien thi book details
+    //Lấy thông tin database và hiển thị thông tin sách
     public void getBookDetails(){
         int bookId = Integer.parseInt(txt_bookId.getText());
         
@@ -47,7 +47,8 @@ public class BorrowBook extends javax.swing.JFrame {
         }
     }
     
-    //lay thong tin tu database va hien thi book details
+    
+    //Lấy thông tin từ database và hiển thị thông tin học sinh
     public void getStudentDetails(){
         int studentId = Integer.parseInt(txt_studentId.getText());
         
@@ -76,7 +77,7 @@ public class BorrowBook extends javax.swing.JFrame {
         }
     }
     
-    //Add thong tin muon sach vao database
+    //Add thông tin mượn vào database
     public boolean borrowBook(){
         
         boolean isBorrow = false;
@@ -107,7 +108,7 @@ public class BorrowBook extends javax.swing.JFrame {
             pst.setString(4, studentName);
             pst.setDate(5, sBorrowDate);
             pst.setDate(6, sDueDate);
-            pst.setString(7, "Đang mượn");
+            pst.setString(7, "Borrowing");
             
             int RC = pst.executeUpdate();
             if(RC > 0){
@@ -121,7 +122,7 @@ public class BorrowBook extends javax.swing.JFrame {
         return isBorrow;
     }
     
-    //update so luong sach sau khi muon
+    //Update số lượng sách
     public void updateBookCount(){
         int bookId = Integer.parseInt(txt_bookId.getText());
         try{
@@ -143,7 +144,7 @@ public class BorrowBook extends javax.swing.JFrame {
         }
     }
     
-    //check xem hoc sinh da muon sach nay chua
+    //Check xem sinh viên đã mượn sách naỳ chưa
     public boolean isARBook(){
         
         boolean isAlready = false;
@@ -156,7 +157,7 @@ public class BorrowBook extends javax.swing.JFrame {
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setInt(1, bookId);
             pst.setInt(2, studentId);
-            pst.setString(3, "Đang mượn");
+            pst.setString(3, "Borrowing");
             
             ResultSet rs = pst.executeQuery();
                 if(rs.next()){

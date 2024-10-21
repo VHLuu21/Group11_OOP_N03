@@ -6,7 +6,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.table.DefaultTableModel;
-import java.sql.Date;
 /**
  *
  * @author luuvu
@@ -24,7 +23,7 @@ public class HomePage extends javax.swing.JFrame {
         setDataToCard();
     }
     
-    //Set sinh vien vao table
+    //Set sinh viên  table
     public void setStudentDetailsToTable(){
         
         try{
@@ -49,7 +48,7 @@ public class HomePage extends javax.swing.JFrame {
           
     }
     
-    //set thong tin cua book vao table
+    //Set thông tin sách table
     public void setBookDetailsToTable(){
         
         try{
@@ -76,7 +75,7 @@ public class HomePage extends javax.swing.JFrame {
         }
     }
     
-    //set so luong sach, sinh vien va muon sach vao card
+    //Set số lượng sách, sinh viên và mượn sách
     public void setDataToCard(){
         
         Statement st = null;
@@ -94,7 +93,7 @@ public class HomePage extends javax.swing.JFrame {
             rs.last();
             lbl_noS.setText(Integer.toString(rs.getRow()));
             
-            rs = st.executeQuery("SELECT * FROM borrow_book_details WHERE status = '"+"Đang mượn"+"'");
+            rs = st.executeQuery("SELECT * FROM borrow_book_details WHERE status = '"+"Borrowing"+"'");
             rs.last();
             lbl_bB.setText(Integer.toString(rs.getRow()));
         }catch(Exception e){

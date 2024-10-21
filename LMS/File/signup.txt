@@ -1,2 +1,8 @@
 Tên đăng nhập: ttv, Mật khẩu: 1234, Email: concainit@gmail.com, Liên hệ: 123457788
 Tên đăng nhập: ttv1, Mật khẩu: luuvu00, Email: sn@gmail.com, Liên hệ: 456456
+Tên đăng nhập: Nguyen Minh Duc, Mật khẩu: 12345678, Email: minhduc@gmail.com, Liên hệ: 36363637
+Tên đăng nhập: Phel, Mật khẩu: 1, Email: gg@gmail.com, Liên hệ: 0123456789
+Tên đăng nhập: vvhd, Mật khẩu: dwadw, Email: sfs@gmail.com, Liên hệ: 234311
+Tên đăng nhập: admin, Mật khẩu: 1234, Email: a@gmail.com, Liên hệ: 234444
+Tên đăng nhập: admin1, Mật khẩu: 12345, Email: d@gmail.com, Liên hệ: 03444554
+Tên đăng nhập: admin2, Mật khẩu: 1234, Email: a@gmail.com, Liên hệ: 1233444545

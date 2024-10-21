@@ -23,7 +23,7 @@ public class ManageStudent extends javax.swing.JFrame {
         setStudentDetailsToTable();
     }
     
-    //Set sinh vien vao table
+    //Set sinh viên vào table
     public void setStudentDetailsToTable(){
         
         try{
@@ -48,7 +48,7 @@ public class ManageStudent extends javax.swing.JFrame {
           
     }
     
-    //them sinh vien
+    //Thêm sinh viên
     public boolean addStudent(){
         
         boolean isAdd = false;
@@ -78,7 +78,7 @@ public class ManageStudent extends javax.swing.JFrame {
         return isAdd;
     }
     
-    //Update sinh vien
+    //Update sinh viên
     public boolean updateStudent(){
         boolean isUpdate = false;
         studentId = Integer.parseInt(txt_studentId.getText());
@@ -107,7 +107,7 @@ public class ManageStudent extends javax.swing.JFrame {
         return isUpdate;
     }
     
-    //Xoa sinh vien
+    //Xóa sinh viên
     public boolean deleteStudent(){
         boolean isDelete = false;
         studentId = Integer.parseInt(txt_studentId.getText());
@@ -130,7 +130,7 @@ public class ManageStudent extends javax.swing.JFrame {
         return isDelete;
     }
     
-    //clear bang
+    //clear bảng
     public void clearTable(){
         DefaultTableModel model = (DefaultTableModel) tbl_studentDetails.getModel();
         model.setRowCount(0);

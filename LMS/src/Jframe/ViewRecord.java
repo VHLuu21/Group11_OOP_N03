@@ -20,7 +20,7 @@ public class ViewRecord extends javax.swing.JFrame {
         setBorrowDetailsToTable();
     }
     
-    //Set thong tin muon sach tu database vao table
+    //Set thông tin mượn sách từ database vào table
     public void setBorrowDetailsToTable(){
         
         try{
@@ -53,7 +53,7 @@ public class ViewRecord extends javax.swing.JFrame {
         model.setRowCount(0);
     }
     
-    //Tim kiem thong tin muon
+    //Tìm kiếm thông tin mượn
     public void search(){
         Date uFromDate = date_fromDate.getDatoFecha();
         Date uToDate = date_toDate.getDatoFecha();
@@ -230,7 +230,7 @@ public class ViewRecord extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        clearTable();
         search();
     }//GEN-LAST:event_jButton1ActionPerformed
 

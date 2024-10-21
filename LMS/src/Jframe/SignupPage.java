@@ -1,12 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Jframe;
 
-
-
-import static Jframe.DBConnection.con;
 import java.sql.PreparedStatement;
 import java.sql.DriverManager;
 import javax.swing.JOptionPane;
@@ -18,16 +11,14 @@ import java.sql.Connection;
  */
 public class SignupPage extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Signup
-     */
     public SignupPage() {
         initComponents();
     }
     
+    //Lấy thông tin người dùng nhập vào và đưa lên 
     public void insertSingupDetails(){
         String name = txt_username.getText();
-        String pwd = txt_password.getText();
+        char[] pwdArr = txt_password.getPassword();
         String email = txt_email.getText();
         String contact = txt_contact.getText();
         
@@ -36,6 +27,7 @@ public class SignupPage extends javax.swing.JFrame {
             String sql = "INSERT INTO users(name,password,email,contact) VALUES (?,?,?,?)";
             PreparedStatement pst = con.prepareStatement(sql);
             
+            String pwd = new String(pwdArr);
             pst.setString(1, name);
             pst.setString(2, pwd);
             pst.setString(3, email);
@@ -62,12 +54,13 @@ public class SignupPage extends javax.swing.JFrame {
         }
     }
     
-    //Validate
+    //Kiểm tra thông tin người dùng nhập vào
     public boolean validateSignup(){
         String name = txt_username.getText();
-        String pwd = txt_password.getText();
+        char[] pwdArr = txt_password.getPassword();
         String email = txt_email.getText();
         String contact = txt_contact.getText();
+        String pwd = new String(pwdArr);
         
         if(name.equals("")){
             JOptionPane.showMessageDialog(this, "Vui lòng nhập tên người dùng !");
@@ -89,7 +82,7 @@ public class SignupPage extends javax.swing.JFrame {
         return true;
     }
     
-    // Check duplicate user
+    // Check người dùng xem có bị trùng lặp
     public boolean checkDuplicateUser(){
         String name = txt_username.getText();
         boolean isExist = false;
@@ -135,7 +128,6 @@ public class SignupPage extends javax.swing.JFrame {
         txt_username = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        txt_password = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         txt_email = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
@@ -145,6 +137,7 @@ public class SignupPage extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         txt_contact = new javax.swing.JTextField();
+        txt_password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -211,18 +204,6 @@ public class SignupPage extends javax.swing.JFrame {
         jLabel9.setText("Password");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 90, 30));
 
-        txt_password.setBackground(new java.awt.Color(37, 37, 180));
-        txt_password.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txt_password.setForeground(new java.awt.Color(255, 255, 0));
-        txt_password.setToolTipText("");
-        txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_passwordActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 240, 40));
-
         jLabel11.setFont(new java.awt.Font("Verdana", 0, 17)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Email");
@@ -282,6 +263,12 @@ public class SignupPage extends javax.swing.JFrame {
         txt_contact.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jPanel2.add(txt_contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 490, 240, 40));
 
+        txt_password.setBackground(new java.awt.Color(37, 37, 180));
+        txt_password.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txt_password.setForeground(new java.awt.Color(255, 255, 0));
+        txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 240, 40));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 450, 800));
 
         setSize(new java.awt.Dimension(1214, 808));
@@ -291,10 +278,6 @@ public class SignupPage extends javax.swing.JFrame {
     private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_usernameActionPerformed
-
-    private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_passwordActionPerformed
 
     private void txt_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_emailActionPerformed
         // TODO add your handling code here:
@@ -377,7 +360,7 @@ public class SignupPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField txt_contact;
     private javax.swing.JTextField txt_email;
-    private javax.swing.JTextField txt_password;
+    private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_username;
     // End of variables declaration//GEN-END:variables
 }

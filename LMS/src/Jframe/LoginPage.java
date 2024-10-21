@@ -1,37 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Jframe;
 
-
-
-import static Jframe.DBConnection.con;
 import java.sql.PreparedStatement;
 import java.sql.DriverManager;
 import javax.swing.JOptionPane;
 import java.sql.ResultSet;
 import java.sql.Connection;
-/**
+/**1
  *
  * @author luuvu
  */
 public class LoginPage extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Signup
-     */
     public LoginPage() {
         initComponents();
     }
     
      
     
-    //Validate
+    //Kiểm tra thông tin người dùng nhập vào
     public boolean validateLogin(){
         String name = txt_username.getText();
-        String pwd = txt_password.getText();
-          
+        char[] pwdArr = txt_password.getPassword();
+        String pwd = new String(pwdArr);
         if(name.equals("")){
             JOptionPane.showMessageDialog(this, "Vui lòng nhập tên người dùng !");
             return false;
@@ -48,13 +38,14 @@ public class LoginPage extends javax.swing.JFrame {
     //Kiểm tra tài khoản + mật khẩu với database
     public void login(){
         String name = txt_username.getText();
-        String pwd = txt_password.getText();
+        char[] pwdArr = txt_password.getPassword();
         
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_ms","root","");           
             PreparedStatement pst = con .prepareStatement("SELECT * FROM users WHERE name = ? AND password = ?");
             
+            String pwd = new String(pwdArr);
             pst.setString(1, name);
             pst.setString(2, pwd);
             
@@ -95,13 +86,13 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        txt_password = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         txt_username = new javax.swing.JTextField();
+        txt_password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -151,18 +142,6 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel9.setText("Password");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 90, 30));
 
-        txt_password.setBackground(new java.awt.Color(37, 37, 180));
-        txt_password.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        txt_password.setForeground(new java.awt.Color(255, 255, 0));
-        txt_password.setToolTipText("");
-        txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_passwordActionPerformed(evt);
-            }
-        });
-        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 240, 40));
-
         jButton1.setBackground(new java.awt.Color(255, 0, 255));
         jButton1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -202,15 +181,17 @@ public class LoginPage extends javax.swing.JFrame {
         txt_username.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jPanel2.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 287, 240, 40));
 
+        txt_password.setBackground(new java.awt.Color(37, 37, 180));
+        txt_password.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txt_password.setForeground(new java.awt.Color(255, 255, 0));
+        txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jPanel2.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 240, 40));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 450, 800));
 
         setSize(new java.awt.Dimension(1214, 808));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_passwordActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         SignupPage sign = new SignupPage();
@@ -280,7 +261,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField txt_password;
+    private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_username;
     // End of variables declaration//GEN-END:variables
 }
